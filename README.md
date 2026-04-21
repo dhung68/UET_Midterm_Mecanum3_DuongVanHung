@@ -16,8 +16,8 @@ Trước khi chạy, hãy đảm bảo máy tính đã cài đặt đầy đủ 
                  ros-humble-teleop-twist-keyboard \
                  ros-humble-joint-state-publisher-gui
 ## 3. Hướng dẫn cài đặt
-* mkdir -p ~/rosgk_ws/src
-* cd ~/rosgk_ws/src
+* mkdir -p ~/rosgk_ws_hung/src
+* cd ~/rosgk_ws_hung/src
 * git clone https://github.com/dhung68/UET_Midterm_Mecanum3_DuongVanHung.git
 * cd ~/rosgk_ws
 * colcon build --symlink-install --packages-select circle3
@@ -25,5 +25,5 @@ Trước khi chạy, hãy đảm bảo máy tính đã cài đặt đầy đủ 
   
 ## 4. Khởi chạy mô phỏng
 * ros2 launch circle3 gazebo.launch.py
-* ros2 run teleop_twist_keyboard teleop_twist_keyboard
-* ros2 run circle3 arm_teleop.py
+* ros2 run teleop_twist_keyboard teleop_twist_keyboard -> node di chuyển
+* ros2 run circle3 arm_teleop.py -> node điều khiển tay máymáy
