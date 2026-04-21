@@ -1,0 +1,46 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100 
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+arm_controller:
+  ros__parameters:
+    joints:
+      - joint_slider
+      - joint_2
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+    # Thêm gains để cánh tay không bị trôi hoặc rung
+    gains:
+      joint_slider: {p: 100.0, i: 0.01, d: 10.0}
+      joint_2: {p: 50.0, i: 0.01, d: 1.0}
+
+velocity_controller:
+  ros__parameters:
+    joints:
+      - joint_wheel_sau_right
+      - joint_wheel_sau_left
+      - joint_wheel_truoc
+    
+    # --- ĐOẠN NÀY LÀ BẮT BUỘC ĐỂ KHỚP VỚI URDF ---
+    command_interfaces:
+      - velocity
+    state_interfaces:
+      - position
+      - velocity
+
+    # --- GAINS: ĐỂ MÔ-TƠ CÓ LỰC KÉO CÁI ĐẾ 4.47KG  ---
+    gains:
+      joint_wheel_sau_right: {p: 20.0, i: 1.0, d: 0.1}
+      joint_wheel_sau_left: {p: 20.0, i: 1.0, d: 0.1}
+      joint_wheel_truoc: {p: 20.0, i: 1.0, d: 0.1}

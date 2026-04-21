@@ -1,0 +1,549 @@
+<robot
+  name="circle3">
+
+  <link name="base_footprint"/>
+  
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0.0317889877535923"
+        rpy="0 0 0" />
+      <mass
+        value="4.47033462306223" />
+      <inertia
+        ixx="0.0399574110002245"
+        ixy="-4.83999881243247E-10"
+        ixz="0.00146545654401437"
+        iyy="0.0458051504644855"
+        iyz="5.55246009294035E-10"
+        izz="0.0791876035264206" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_sau_right">
+    <inertial>
+      <origin
+        xyz="-7.6131600804108E-07 2.15650566959942E-06 0.00071841478309384"
+        rpy="0 0 0" />
+      <mass
+        value="0.131906732479223" />
+      <inertia
+        ixx="2.27699321603739E-05"
+        ixy="2.68294933845603E-09"
+        ixz="-2.05106412900554E-09"
+        iyy="2.27633815214668E-05"
+        iyz="-7.3718365350262E-10"
+        izz="2.86729789647862E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/wheel_sau_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://circle3/meshes/wheel_sau_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_wheel_sau_right"
+    type="continuous">
+    <origin
+      xyz="-0.09 -0.155884572681199 0"
+      rpy="1.5707963267949 0 -0.523598775598299" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_sau_right" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="300"
+      velocity="10" />
+  </joint>
+  <link
+    name="wheel_sau_left">
+    <inertial>
+      <origin
+        xyz="-2.17651559328291E-06 -3.2692131984986E-08 0.000718509867265654"
+        rpy="0 0 0" />
+      <mass
+        value="0.131906494724633" />
+      <inertia
+        ixx="2.27623201991901E-05"
+        ixy="-3.23060892598828E-10"
+        ixz="1.67029549759273E-10"
+        iyy="2.27708006847311E-05"
+        iyz="-2.17866981332494E-09"
+        izz="2.86727436385161E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/wheel_sau_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://circle3/meshes/wheel_sau_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_wheel_sau_left"
+    type="continuous">
+    <origin
+      xyz="-0.0900000000000001 0.155884572681199 0"
+      rpy="1.5707963267949 0 -2.61799387799149" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_sau_left" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="300"
+      velocity="10" />
+  </joint>
+  <link
+    name="wheel_truoc">
+    <inertial>
+      <origin
+        xyz="-1.43509709702674E-06 -1.78656940407668E-06 0.000718479346331152"
+        rpy="0 0 0" />
+      <mass
+        value="0.131907650971781" />
+      <inertia
+        ixx="2.27677669696208E-05"
+        ixy="-4.22713430978328E-09"
+        ixz="1.42659015952605E-09"
+        iyy="2.27655608077179E-05"
+        iyz="-1.0306403567727E-09"
+        izz="2.86736662972456E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/wheel_truoc.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://circle3/meshes/wheel_truoc.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_wheel_truoc"
+    type="continuous">
+    <origin
+      xyz="0.18 0 0"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_truoc" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="300"
+      velocity="10" />
+  </joint>
+  <link
+    name="slider_link">
+    <inertial>
+      <origin
+        xyz="0.0218317361281271 -2.88271408549207E-10 0.032602992300064"
+        rpy="0 0 0" />
+      <mass
+        value="0.0677003394313209" />
+      <inertia
+        ixx="2.70341075915515E-05"
+        ixy="1.97220245903299E-13"
+        ixz="-1.4633743315358E-05"
+        iyy="7.48791610133604E-05"
+        iyz="1.58640331477615E-14"
+        izz="7.48814985770916E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_slider"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.045"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="slider_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.115"
+      effort="300"
+      velocity="1" />
+    <dynamics damping="10.0" friction="1.0"/>
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.107320277570275 -3.08536217128504E-08 0.00630553369722042"
+        rpy="0 0 0" />
+      <mass
+        value="0.165405785660903" />
+      <inertia
+        ixx="3.95271197067924E-05"
+        ixy="-3.74350425230709E-11"
+        ixz="-1.20609757574813E-05"
+        iyy="0.000982665603084825"
+        iyz="8.73429790238924E-12"
+        izz="0.00100720059606658" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.05 0 0.05"
+      rpy="0 0 -0.0074999" />
+    <parent
+      link="slider_link" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="2" />
+    <dynamics damping="0.7" friction="0.5"/>
+  </joint>
+  <link
+    name="Camera">
+    <inertial>
+      <origin
+        xyz="-0.0084619 6.9389E-18 4.1633E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.01369" />
+      <inertia
+        ixx="2.7843E-06"
+        ixy="-1.1581E-22"
+        ixz="-6.7006E-22"
+        iyy="2.0719E-06"
+        iyz="2.2193E-22"
+        izz="1.1064E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/Camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.49804 0.49804 0.49804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/Camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_Camera"
+    type="fixed">
+    <origin
+      xyz="0.215 -0.045 0.0075"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="Camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="LiDAR">
+    <inertial>
+      <origin
+        xyz="-2.2078E-19 -3.7154E-20 -0.023913"
+        rpy="0 0 0" />
+      <mass
+        value="0.086799" />
+      <inertia
+        ixx="3.0319E-05"
+        ixy="-1.0905E-37"
+        ixz="-3.0314E-23"
+        iyy="3.0319E-05"
+        iyz="-2.2397E-22"
+        izz="3.555E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/LiDAR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://circle3/meshes/LiDAR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_LiDAR"
+    type="fixed">
+    <origin
+      xyz="0 0 0.27"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LiDAR" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <gazebo reference="wheel_sau_right">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+  </gazebo>
+
+  <gazebo reference="wheel_sau_left">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1</maxVel>
+  </gazebo>
+
+  <gazebo reference="wheel_truoc">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+  </gazebo>
+
+  <gazebo reference="LiDAR">
+  <sensor name="lidar" type="ray">
+    <always_on>true</always_on>
+    <visualize>true</visualize> <update_rate>10</update_rate>
+    <ray>
+      <scan>
+        <horizontal>
+          <samples>360</samples> <resolution>1</resolution>
+          <min_angle>0.0</min_angle>
+          <max_angle>6.28</max_angle>
+        </horizontal>
+      </scan>
+      <range>
+        <min>0.12</min>
+        <max>12.0</max>
+      </range>
+    </ray>
+    <plugin name="lidar_controller" filename="libgazebo_ros_ray_sensor.so">
+      <ros>
+        <remapping>~/out:=scan</remapping> </ros>
+      <output_type>sensor_msgs/LaserScan</output_type>
+      <frame_name>LiDAR</frame_name>
+    </plugin>
+  </sensor>
+  </gazebo>
+
+  <gazebo reference="Camera">
+  <sensor name="camera" type="camera">
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <camera name="head">
+      <horizontal_fov>1.089</horizontal_fov> <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8G8B8</format>
+      </image>
+    </camera>
+    <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+      <camera_name>camera</camera_name>
+      <frame_name>Camera</frame_name>
+    </plugin>
+  </sensor>
+  </gazebo>
+
+  <ros2_control name="GazeboSystem" type="system">
+  <hardware>
+    <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </hardware>
+
+  <joint name="joint_wheel_sau_left">
+    <command_interface name="velocity"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="joint_wheel_sau_right">
+    <command_interface name="velocity"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="joint_wheel_truoc">
+    <command_interface name="velocity"/>
+    <state_interface name="position"/>
+    <state_interface name="velocity"/>
+  </joint>
+  <joint name="joint_slider">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+  <joint name="joint_2">
+    <command_interface name="position"/>
+    <state_interface name="position"/>
+  </joint>
+  </ros2_control>
+
+  <gazebo>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+      <parameters>/home/hung/rosgk_ws/src/circle3/config/controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+</robot>
