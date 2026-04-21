@@ -542,7 +542,7 @@
 
   <gazebo>
     <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-      <parameters>/home/hung/rosgk_ws/src/circle3/config/controllers.yaml</parameters>
+      <parameters>$(find circle3)/config/controllers.yaml</parameters>
     </plugin>
   </gazebo>
 
