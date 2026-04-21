@@ -5,7 +5,6 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     pkg_dir = get_package_share_directory('circle3')
-    # Lưu ý: Nếu Hùng chưa đổi tên file .urdf thì sửa 'urdf_omni.urdf' cho đúng tên file hiện tại
     urdf_file = os.path.join(pkg_dir, 'urdf', 'circle3.urdf') 
 
     with open(urdf_file, 'r') as infp:

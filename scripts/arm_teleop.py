@@ -23,11 +23,10 @@ class ArmTeleop(Node):
         self.pub = self.create_publisher(JointTrajectory, '/arm_controller/joint_trajectory', 10)
         self.settings = termios.tcgetattr(sys.stdin)
         
-        # Vị trí ban đầu
         self.slider_pos = 0.0
         self.joint2_pos = 0.0
-        self.step_slider = 0.01 # Mỗi lần bấm dịch 1cm
-        self.step_joint2 = 0.3  # Mỗi lần bấm xoay 0.1 rad
+        self.step_slider = 0.01 
+        self.step_joint2 = 0.3 
 
     def get_key(self):
         tty.setraw(sys.stdin.fileno())
