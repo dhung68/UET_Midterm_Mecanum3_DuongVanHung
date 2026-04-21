@@ -20,7 +20,7 @@ Trước khi chạy, hãy đảm bảo máy tính đã cài đặt đầy đủ 
 * cd ~/rosgk_ws/src
 * git clone https://github.com/dhung68/UET_Midterm_Mecanum3_DuongVanHung.git
 * cd ~/rosgk_ws
-*colcon build --symlink-install --packages-select circle3
+* colcon build --symlink-install --packages-select circle3
 * source install/setup.bash
   
 ## 4. Khởi chạy mô phỏng
